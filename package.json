@@ -9,7 +9,7 @@
   "bin": {
     "databuild": "./cli.js"
   },
-  "author": "",
+  "author": "Eric Weber <eric@prolificinteractive.com>",
   "license": "ISC",
   "dependencies": {
     "bluebird": "3.4.0",
