@@ -10,7 +10,7 @@ Data Builder is a simple preprocessor for JSON and YAML files that uses directiv
 
 ### CLI
 
-`data-builder path/to/file.yaml --format=yaml > result.yaml`
+`databuild path/to/file.yaml --format=yaml > result.yaml`
 
 `--format` - Specifies the output format. It can be either `yaml` or `json`.
 
