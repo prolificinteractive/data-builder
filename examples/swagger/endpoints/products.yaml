@@ -1,0 +1,16 @@
+/products/search:
+  get:
+    parameters:
+      - name: keywords
+      - in: query
+      - description: The search query submitted by the user.
+      - type: string
+      - required: true
+/products/{id}:
+  get:
+    parameters:
+      - name: id
+      - in: path
+      - description: ID of a product.
+      - type: string
+      - required: true

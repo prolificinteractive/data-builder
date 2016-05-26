@@ -1,0 +1,4 @@
+obj:
+  $import:
+    - './nested.yaml'
+    - './import.yaml'

@@ -1,0 +1,10 @@
+a:
+  b:
+    - this
+    - is
+    - an
+    - import!
+  nested:
+    $import: './nested.yaml'
+    hello:
+      x: 1000

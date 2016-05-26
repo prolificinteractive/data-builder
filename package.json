@@ -1,0 +1,24 @@
+{
+  "name": "data-builder",
+  "version": "0.0.1",
+  "description": "A build tool for JSON and YAML that uses special keys to specify functions, i.e. $import.",
+  "main": "./lib/parse-file.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "bin": {
+    "databuild": "./cli.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "3.4.0",
+    "commander": "2.9.0",
+    "js-yaml": "3.6.1",
+    "lodash": "4.13.1"
+  },
+  "devDependencies": {
+    "mocha": "2.5.3",
+    "should": "8.4.0"
+  }
+}

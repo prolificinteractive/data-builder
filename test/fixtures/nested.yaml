@@ -1,0 +1,6 @@
+hello:
+  i:
+    am:
+      a:
+    nested:
+  object: true

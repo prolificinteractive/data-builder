@@ -1,0 +1,16 @@
+info:
+  title: Example API
+  description: Do fake things.
+  version: "1.0"
+host: api.prolificinteractive.com
+schemes:
+  - https
+basePath: /v1
+produces:
+  - application/json
+paths:
+  $import:
+    - endpoints/products.yaml
+definitions:
+  $import:
+    - models/product.yaml
