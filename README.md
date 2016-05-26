@@ -18,7 +18,7 @@ Data Builder is a simple preprocessor for JSON and YAML files that uses directiv
 
 This module exports a function, which takes a path to a file as its lone argument:
 
-```
+```javascript
 'use strict';
 
 const parseFile = require('data-builder');
@@ -46,7 +46,7 @@ It can also take an array of files, which will be loaded asynchronously (no guar
 
 `a.yaml`
 
-```
+```yaml
 foo:
   bar:
     $import: b.yaml
@@ -55,14 +55,14 @@ foo:
 
 `b.yaml`
 
-```
+```yaml
 x: 100
 y: 200
 ```
 
 Result:
 
-```
+```yaml
 foo:
   bar:
     x: 100
