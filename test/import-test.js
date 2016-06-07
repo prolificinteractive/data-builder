@@ -36,4 +36,12 @@ describe('Loading a file', () => {
       });
     });
   });
+
+  describe('with an imported array', () => {
+    it('assigns the array directly to the key it was imported on', () => {
+      return parseFile(__dirname + '/fixtures/array-importer.yaml').tap(data => {
+        data.my.array.should.be.an.instanceOf(Array);
+      });
+    });
+  });
 });
