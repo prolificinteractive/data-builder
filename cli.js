@@ -4,7 +4,7 @@
 const yaml = require('js-yaml');
 const path = require('path');
 const program = require('commander');
-const parseFile = require('./lib/parse-file');
+const parseFile = require('./index').parseFile;
 const pkg = require('./package.json');
 
 program
