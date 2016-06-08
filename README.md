@@ -21,13 +21,12 @@ This module exports a function, which takes a path to a file as its lone argumen
 ```javascript
 'use strict';
 
-const parseFile = require('data-builder');
+const dataBuilder = require('data-builder');
 
-function buildFile() {
-  return parseFile(__dirname + '/path/to/file.yaml')
-    .then(doStuffToData)
-    .then(doMoreStuffToData);
-}
+dataBuilder
+  .parseFile(__dirname + '/path/to/file.yaml')
+  .then(doStuffWithData)
+  .tap(doMoreStuffWithData);
 ```
 
 ## Directives API
@@ -40,7 +39,15 @@ Right now, the tool only recognizes one directive, `$import`.
 
 The `$import` directive loads the specified file, relative to that file, and deeply extends the object at that location with the imported object. You can override keys by defining them explicitly before or after the `$import` directive.
 
-It can also take an array of files, which will be loaded asynchronously (no guaranteed order).
+It can also take an array of files, which will be loaded asynchronously (no guaranteed order) and merged.
+
+#### Merge Behavior
+
+When objects are imported, they will be merged passively (existing keys are not overridden). When arrays are imported, they will be concatenated if the existing value is an array. Any incompatible merging will result in the new value replacing the previous.
+
+#### Globs
+
+As of 0.1, the library supports globbing via the [`node-glob` library](https://github.com/isaacs/node-glob), which will pull in files matching a pattern. This also works when you have an array of imports--it will simply expand the globbed files into the array.
 
 #### Example
 

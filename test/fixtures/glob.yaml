@@ -1,0 +1,6 @@
+single:
+  $import: 'import*'
+multi:
+  $import:
+    - 'import*'
+    - '*-importer.yaml'
