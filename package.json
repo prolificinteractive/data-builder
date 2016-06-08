@@ -10,6 +10,10 @@
     "databuild": "./cli.js"
   },
   "author": "Eric Weber <eric@prolificinteractive.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prolificinteractive/data-builder.git"
+  },
   "license": "ISC",
   "dependencies": {
     "bluebird": "3.4.0",
