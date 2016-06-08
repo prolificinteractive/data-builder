@@ -26,6 +26,12 @@ describe('Loading a file', () => {
         data.foo.biz.a.nested.hello.object.should.equal(true);
       });
     });
+
+    it('removes all $import keys', () => {
+      return dataBuilder.parseFile(__dirname + '/fixtures/example.yaml').tap(data => {
+        JSON.stringify(data).indexOf('$import').should.equal(-1);
+      });
+    });
   });
 
   describe('with an import array', () => {
