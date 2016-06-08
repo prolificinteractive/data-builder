@@ -1,6 +1,6 @@
 {
   "name": "data-builder",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A build tool for JSON and YAML that uses special keys to specify functions, i.e. $import.",
   "main": "index.js",
   "scripts": {
