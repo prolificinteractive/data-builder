@@ -12,6 +12,16 @@ describe('Loading a file', () => {
     });
   });
 
+  describe('with a text file', () => {
+    it('should use the contents of the file as the value', () => {
+      return dataBuilder
+        .parseFile(__dirname + '/fixtures/text-import.yaml')
+        .tap(data => {
+          data.text.trim().should.equal('# A Heading');
+        });
+    });
+  });
+
   describe('with one level of imports', () => {
     it('parses the data specified in the $import file', () => {
       return dataBuilder.parseFile(__dirname + '/fixtures/import.yaml').tap(data => {
